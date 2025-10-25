@@ -1,0 +1,299 @@
+/* frontend/src/components/LobbyScreen/LobbyScreen.css */
+
+.lobby-screen {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.lobby-container {
+  max-width: 800px;
+  width: 100%;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+/* Шапка */
+.lobby-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 24px;
+  color: white;
+}
+
+.lobby-title {
+  margin: 0 0 12px 0;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.player-info {
+  display: flex;
+  gap: 16px;
+  font-size: 14px;
+}
+
+.player-id {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+.connection-status {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.connection-status.connected {
+  background: rgba(76, 175, 80, 0.3);
+}
+
+.connection-status.disconnected {
+  background: rgba(244, 67, 54, 0.3);
+}
+
+/* Секции */
+.create-room-section,
+.join-by-code-section,
+.available-rooms-section {
+  padding: 24px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.available-rooms-section {
+  border-bottom: none;
+}
+
+.create-room-section h2,
+.join-by-code-section h2,
+.available-rooms-section h2 {
+  margin: 0 0 16px 0;
+  font-size: 20px;
+  color: #333;
+}
+
+/* Кнопки */
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.btn-secondary {
+  background: #4caf50;
+  color: white;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: #45a049;
+}
+
+.btn-large {
+  width: 100%;
+  font-size: 18px;
+  padding: 16px;
+}
+
+.btn-small {
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+.btn-join {
+  background: #2196f3;
+  color: white;
+}
+
+.btn-join:hover:not(:disabled) {
+  background: #1976d2;
+}
+
+/* Ввод кода комнаты */
+.join-input-group {
+  display: flex;
+  gap: 12px;
+}
+
+.room-code-input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.room-code-input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+/* Список комнат */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.rooms-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.room-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background: #f5f5f5;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.room-card:hover {
+  background: #eeeeee;
+  transform: translateX(4px);
+}
+
+.room-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.room-id {
+  font-size: 18px;
+  color: #333;
+}
+
+.room-players {
+  font-size: 14px;
+  color: #666;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.status-waiting {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status-playing {
+  background: #d1ecf1;
+  color: #0c5460;
+}
+
+/* Пустое состояние */
+.no-rooms {
+  text-align: center;
+  padding: 40px 20px;
+  color: #666;
+}
+
+.no-rooms p {
+  margin: 8px 0;
+}
+
+.hint {
+  font-size: 14px;
+  color: #999;
+}
+
+/* Загрузка */
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+}
+
+/* Ошибка */
+.error-message {
+  background: #f44336;
+  color: white;
+  padding: 16px;
+  margin: 16px 24px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-error {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+/* Футер */
+.lobby-footer {
+  background: #f5f5f5;
+  padding: 16px 24px;
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+}
+
+/* Адаптив */
+@media (max-width: 600px) {
+  .lobby-title {
+    font-size: 24px;
+  }
+
+  .player-info {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .join-input-group {
+    flex-direction: column;
+  }
+
+  .room-card {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .btn-join {
+    width: 100%;
+  }
+}
