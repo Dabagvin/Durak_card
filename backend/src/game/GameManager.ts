@@ -1,7 +1,7 @@
 // backend/src/game/GameManager.ts
 
 import { GameSession } from './GameSession';
-import type { RoomInfo } from '../../../frontend/src/shared/types';
+import type { RoomInfo } from '../../../shared/types';
 import { v4 as uuidv4 } from 'uuid';
 
 /**

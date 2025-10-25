@@ -18,7 +18,8 @@
   "devDependencies": {
     "@eslint/js": "^9.36.0",
     "@twa-dev/types": "^8.0.2",
-    "@types/node": "^24.6.0",
+    "@types/express": "^5.0.4",
+    "@types/node": "^24.9.1",
     "@types/react": "^19.1.16",
     "@types/react-dom": "^19.1.9",
     "@vitejs/plugin-react": "^5.0.4",

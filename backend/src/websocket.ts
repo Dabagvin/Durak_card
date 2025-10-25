@@ -3,7 +3,7 @@
 import { WebSocketServer, WebSocket } from 'ws';
 import { Server as HTTPServer } from 'http';
 import { gameManager } from './game/GameManager';
-import type { ClientMessage, ServerMessage } from '../../frontend/src/shared/types';
+import type { ClientMessage, ServerMessage } from '../../shared/types';
 
 // Маппинг: playerId -> WebSocket connection
 const connections = new Map<string, WebSocket>();

@@ -1,6 +1,6 @@
 // backend/src/game/GameSession.ts
 
-import type { GameState, Card, Suit, CardPair } from '../../../frontend/src/shared/types';
+import type { GameState, Card, Suit, CardPair } from '../../../shared/types';
 import {
   generateDeck,
   shuffleDeck,

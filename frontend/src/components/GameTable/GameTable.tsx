@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import type { GameState, CardPair, Card } from '../../shared/types'; // Обнови путь под свой проект
+import type { GameState, CardPair, Card } from '../../../../shared/types'; // Обнови путь под свой проект
 import './GameTable.css';
 
 interface GameTableProps {

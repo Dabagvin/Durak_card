@@ -1,7 +1,7 @@
 // backend/src/game/CardLogic.ts
 
-import type { Card, Suit, Rank } from '../../../frontend/src/shared/types';
-import { RANK_VALUES } from '../../../frontend/src/shared/types';
+import type { Card, Suit, Rank } from '../../../shared/types';
+import { RANK_VALUES } from '../../../shared/types';
 
 /**
  * Генерация полной колоды (36 карт: 6-A, 4 масти)
